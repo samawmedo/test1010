@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f3f4f6" />
+    <title>رسالة خاصة</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <main class="app" id="app">
+      <!-- Password Screen -->
+      <section class="screen is-active" id="screen-password" aria-label="شاشة الدخول">
+        <div class="center stack fade-in">
+          <div class="card glass">
+            <div class="title">رسالة مخفية</div>
+            <div class="subtitle">للعيون اللي تعرف</div>
+
+            <div class="field">
+              <input
+                id="passwordInput"
+                class="input"
+                type="password"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="اكتب الباسورد…"
+                aria-label="اكتب الباسورد"
+              />
+            </div>
+
+            <button id="enterBtn" class="btn primary" type="button">دخول</button>
+
+            <div id="passwordHint" class="hint" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Screen -->
+      <section class="screen" id="screen-start" aria-label="شاشة البداية">
+        <div class="center">
+          <button id="startTap" class="tap" type="button" aria-label="ابدأ">
+            <span class="tapText">اضغط هنا</span>
+            <span class="tapGlow" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Message Flow -->
+      <section class="screen" id="screen-messages" aria-label="الرسائل">
+        <div class="topBar">
+          <div class="pill glass">
+            <span class="dot"></span>
+            <span class="pillText">خاص جدًا</span>
+          </div>
+
+          <button id="audioBtn" class="iconBtn glass" type="button" aria-label="الصوت">
+            <span id="audioLabel">تشغيل</span>
+          </button>
+        </div>
+
+        <div class="center stack">
+          <div class="messageCard glass" role="group" aria-label="رسالة">
+            <div id="messageText" class="messageText" aria-live="polite"></div>
+          </div>
+
+          <button id="nextBtn" class="btn next" type="button">التالي</button>
+        </div>
+      </section>
+
+      <!-- Names + Counter -->
+      <section class="screen" id="screen-love" aria-label="أسماء وعداد الحب">
+        <div class="topBar">
+          <div class="pill glass">
+            <span class="dot"></span>
+            <span class="pillText">للأبد</span>
+          </div>
+          <button id="backToStart" class="iconBtn glass" type="button" aria-label="رجوع">
+            <span>رجوع</span>
+          </button>
+        </div>
+
+        <div class="center stack">
+          <button id="namesTap" class="names glass" type="button" aria-label="الأسماء">
+            <span class="namesText">محمد &amp; هدى ❤️</span>
+            <span class="namesSub">بيننا شيء ما ينشرح… بس يُحس</span>
+          </button>
+
+          <div class="counter glass" aria-label="عداد الوقت">
+            <div class="counterTitle">من يوم بدينا</div>
+            <div class="boxes" role="group" aria-label="الأيام والساعات والدقائق والثواني">
+              <div class="box">
+                <div id="days" class="num">0</div>
+                <div class="label">أيام</div>
+              </div>
+              <div class="box">
+                <div id="hours" class="num">0</div>
+                <div class="label">ساعات</div>
+              </div>
+              <div class="box">
+                <div id="minutes" class="num">0</div>
+                <div class="label">دقائق</div>
+              </div>
+              <div class="box">
+                <div id="seconds" class="num">0</div>
+                <div class="label">ثواني</div>
+              </div>
+            </div>
+            <div id="sinceLine" class="sinceLine" aria-live="polite"></div>
+          </div>
+
+          <div id="hidden" class="hidden glass" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
